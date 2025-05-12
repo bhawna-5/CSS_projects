@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@500,700;1,700&display=swap");
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "montserrat", sans-serif;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+.grid {
+  max-width: 550px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.class-content {
+  padding: 30px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  display: inherit;
+}
+.price {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* padding: 15px; */
+}
+.category {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+.name {
+  font-family: "Fraunces", serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1em;
+  color: hsl(212, 21%, 14%);
+}
+.des {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: hsl(228, 12%, 48%);
+}
+.curr-price {
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  color: hsl(158, 36%, 37%);
+  font-weight: 900;
+}
+.old-price {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.btn {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+@media screen and (max-width: 628px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .class-content {
+    display: block;
+  }
+  .image img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .name {
+    font-size: 45px;
+  }
+  .category {
+    font-size: 17px;
+  }
+  .des {
+    font-size: 18px;
+    font-weight: 550;
+  }
+  .curr-price {
+    padding-top: 8px;
+    font-size: 30px;
+  }
+  .old-price {
+    font-size: 18px;
+  }
+  .name,
+  .des,
+  .category {
+    padding-bottom: 23px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 15px auto;
+    padding: 0 15px;
+  }
+  .image img {
+    max-height: 290px;
+  }
+  .class-content {
+    padding: 24px;
+  }
+  .name,
+  .des,
+  .category {
+    padding-bottom: 16px;
+  }
+  .name {
+    font-size: 28px;
+  }
+  .des {
+    font-size: 12px;
+  }
+}
